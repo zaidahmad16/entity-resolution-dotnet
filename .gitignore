@@ -1,0 +1,10 @@
+bin/
+obj/
+*.user
+.vs/
+.vscode/
+.idea/
+BenchmarkDotNet.Artifacts/
+TestResults/
+*.csv
+.env

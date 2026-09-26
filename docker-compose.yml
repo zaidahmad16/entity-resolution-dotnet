@@ -1,0 +1,16 @@
+# Local SQL Server for development (milestone 2 onward).
+# Start:  docker compose up -d
+# Needs a .env file next to this one with:  MSSQL_SA_PASSWORD=<a strong password>
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+
+volumes:
+  sqldata:
