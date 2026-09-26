@@ -8,3 +8,4 @@ BenchmarkDotNet.Artifacts/
 TestResults/
 *.csv
 .env
+instructions.md
